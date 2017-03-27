@@ -1,0 +1,21 @@
+{
+  "name": "4xxi",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Ildus Shakirov <cringedog@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "jquery": "^3.1.0"
+  }
+}

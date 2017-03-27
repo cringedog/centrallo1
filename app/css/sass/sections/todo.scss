@@ -1,0 +1,97 @@
+@import "../misc/helpers";
+
+.todo{
+	margin-bottom:30px;
+	@include phones{
+		margin-bottom:24px;
+	}
+
+}
+
+.todo__item{
+	position:relative;
+	&:not(:last-of-type){
+		padding-bottom:16px;
+	}
+	&:not(:first-of-type){
+		padding-top:14px;
+	}
+	&:not(:last-of-type){
+		border-bottom:1px solid  #bdbdbd;
+	}
+	&::after{
+		content:'';
+		display:block;
+		height:0px;
+		clear:both;
+	}
+
+	@include phones{
+		padding-left:29px;
+		margin-bottom:18px;
+
+
+		&:not(:last-of-type){
+			padding-bottom:0px;
+		}
+		&:not(:first-of-type){
+			padding-top:0px;
+		}
+		&:not(:last-of-type){
+			border-bottom:none;
+		}
+	}
+}
+
+.todo__item-left{
+	box-sizing:border-box;
+	float:left;
+	width:80%;
+	padding-left:32px;
+	color: #333333;
+	position:relative;
+	@include tablets {
+		width:74%;
+	}
+	@include phones {
+		float:none;
+		padding:3px 0;
+		width:auto;
+		margin-bottom:5px;
+	}
+}
+
+.todo__item-icon{
+	position:absolute;
+	top:0;
+	left:0;
+	@include phones{
+		top:4px;
+		left:-28px;
+	}
+}
+
+.todo__item-title{
+	font-weight:500;
+}
+.todo__item-right{
+	float:right;
+	width:18%;
+	color: #858585;
+	@include tablets{
+		width:25%;
+	}
+	@include phones{
+		float:none;
+		width:auto;
+	}
+}
+
+.todo__count{
+	float:left;
+
+}
+
+.todo__time{
+	float:right;
+}

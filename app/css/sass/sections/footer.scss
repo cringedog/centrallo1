@@ -1,0 +1,93 @@
+@import "../misc/helpers";
+
+.footer{
+	background: $asphalt;
+	color:#979ea4;
+	font-size:12px;
+	z-index:5;
+	@include tablets {
+		height:64px;
+		font-size:11px;
+	}
+}
+
+.footer__container{
+	max-width:960px;
+	margin: 0 auto;
+	vertical-align:middle;
+	line-height: $footer-height;
+	@include tablets {
+		line-height:64px;
+		max-width:93.75%;
+	}
+	@include phones {
+		max-width: 92.5%;
+	}
+}
+
+.copyright{
+	display:inline-block;
+	width:20%;
+	@include phones {
+		display:none;
+	}
+}
+
+.copyright__text{
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	text-align: center;
+	color: #979ea4;
+	text-transform: uppercase;
+}
+
+.nav{
+	display:inline-block;
+	width:59%;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	text-align: center;
+	color: #979ea4;
+	@include tablets {
+	}
+	@include phones {
+		width:74%;
+		font-size:11px;
+	}
+}
+
+.nav__item{
+	display:inline-block;
+	margin-right:15px;
+}
+
+.nav__link{
+	color: #979ea4;
+	text-transform: uppercase;
+}
+
+.social{
+	display:inline-block;
+	width:20%;
+	@include tablets {
+	}
+	@include phones {
+		width:24%;
+	}
+}
+
+
+.social__item{
+	display:inline-block;
+	float:right;
+	margin-left:12px;
+}
+
+.social__link{
+	display:block;
+	width:20px;
+	height:20px;
+	position:relative;
+}

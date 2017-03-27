@@ -1,0 +1,146 @@
+@import "../misc/helpers";
+
+.entry{
+	padding-top:15px;
+	margin-bottom:15px;
+}
+.user{
+	font-size:18px;
+	color: #2c2f31;
+	float:left;
+	height:48px;
+	line-height:48px;
+	@include phones {
+		height:38px;
+		line-height:38px;
+		font-size:16px;
+		float: none;
+		clear:both;
+		margin-bottom:15px
+	}
+}
+
+.user__img{
+	display:inline-block;
+	vertical-align:middle;
+	width:48px;
+	margin-right:14px;
+	@include phones {
+		width:38px;
+		margin-right:13px;
+	}
+}
+
+.user__name{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.share{
+	float:right;
+	text-align:right;
+	width:40%;
+	height:56px;
+	padding-top:12px;
+	@include tablets {
+		width:auto;
+	}
+	@include phones {
+		height:auto;
+		padding-top:0;
+		width:46%;
+
+	}
+}
+
+.share__button{
+	display:none;
+	@include phones {
+		display:block;
+	}
+}
+
+.share__button-link{
+	@include phones {
+		display:block;
+		color: #3c434a;
+		font-size:13px;
+		padding: 8.5px 0px;
+		background-color:$white;
+		border-radius:3px;
+		text-align:center;
+		position:relative;
+	}
+}
+
+.share__button-icon{
+	&.sprite_share{
+		left:25%;
+	}
+}
+.link {
+	float:right;
+	margin-left:30px;
+	@include phones {
+		display:none;
+	}
+}
+
+.link__text{	
+  border-radius: 2px;
+  background-color: #92b6c4;
+  padding:6px;
+  color: $white;
+  font-size:13px;
+}
+
+.social.social_entry{
+	width:140px;
+	@include phones {
+		display:none;
+	}
+
+}
+
+.add{
+	float:right;
+	clear:right;
+	@include phones {
+		float: left;
+		clear:none;
+		width:46%;
+		margin-bottom:15px;
+	}
+}
+
+.add__button{
+	background: $dark-sky-blue;
+	display:block;
+	padding:9px 15px;
+	color:white;
+	font-size: 13px;
+	text-align:center;
+	border-radius:3px;
+	@include phones{
+	padding:9px 0;		
+	}
+}
+
+.caption{
+	float:left;
+	clear:left;
+	padding-top:5px;
+	@include phones{
+		float:none;
+	}
+
+}
+
+.caption__text{
+	color: #2c2f31;
+	font-weight:500;
+	font-size:20px;
+	@include phones{
+		font-size:18px;
+	}
+}

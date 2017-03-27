@@ -1,0 +1,58 @@
+@import "../misc/helpers";
+
+.checklist{
+	padding-bottom:15px;
+	color:#494949;
+}
+
+.checklist__item{
+	margin-bottom:5px;
+	position:relative;
+	padding-left:24px;
+	margin-bottom:11px;
+}
+
+.checklist__checkbox{
+	display:none;
+}
+
+.checklist__label{
+
+	&::before{
+		content:'';
+		display:block;
+		width:14px;
+		height:14px;
+		border-radius:2px;
+		box-sizing:border-box;
+		border: solid 2px #b8b8b8;
+		position:absolute;
+		top:0;
+		left:0;
+		background: $white;
+	}
+	&::after{
+		content:'';
+		display:none;
+		width:15px;
+		height:7px;
+		position:absolute;
+		left:6px;
+		top:6px;
+		box-sizing:border-box;
+		border-bottom:2px solid white;
+		border-left:2px solid white;
+		transform-origin: bottom left;
+		transform:rotate(-45deg);
+	}
+}
+
+.checklist__checkbox:checked + .checklist__label{
+	&::before{
+		background: #3b99fc;
+		border-color:#3b99fc;
+	}
+	&::after{
+		display:block;
+	}
+}

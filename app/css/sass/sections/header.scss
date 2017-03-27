@@ -1,0 +1,99 @@
+@import "../misc/helpers.scss";
+
+.header{
+	background:$asphalt;
+	line-height:60px;
+	margin-bottom:15px;
+	font-weight:500;
+	@include tablets {
+		line-height:48px;
+	}
+	@include phones {
+		line-height:48px;
+	}
+}
+
+.logo{
+	display:inline-block;
+	width:14.5%;
+	@include tablets {
+		width:108px;
+	}
+	@include phones {
+		width:108px;
+	}
+}
+
+.logo__img{
+	width:100%;
+	position:relative;
+	top:8px;
+	@include tablets {
+		top:4px;
+	}
+	@include phones {
+		top:4px;
+	}
+}
+
+.signup {
+	display:inline-block;
+	width:69%;
+	text-align:center;
+	@include tablets {
+		width:72%;
+	}
+	@include phones {
+		width:42%;
+	}
+}
+
+.signup__text{
+	text-transform:uppercase;
+	font-size:13px;	
+	letter-spacing: 0.2px;
+}
+
+.signup__link{
+	 color: #37b7ec;
+	 border-bottom:1px solid;
+	 @include tablets {
+	 }
+	 @include phones {
+	 	border-bottom:none;
+	 	display:none;
+	 }
+}
+.signup__link_mobile{
+	display:none;
+	 @include tablets {
+	 }
+	 @include phones {
+		color: #37b7ec;
+	 	display:block;
+	 	border-bottom:none;
+	 }
+
+}
+.signup__info{
+	color: #a3adb3;
+	 @include phones {
+	 	border-bottom:none;
+	 	display:none;
+	 }
+}
+
+
+
+.login {
+	display:inline-block;
+	float:right;
+	width:50px;
+}
+
+.login__link{
+	text-transform: uppercase;
+	line-height:normal;
+	font-size:13px;
+	color: $white;
+}

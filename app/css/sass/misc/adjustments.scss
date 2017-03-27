@@ -1,0 +1,286 @@
+@import "../misc/helpers";
+
+html{
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size:16px;
+}
+
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	font-family: HelveticaNeue;
+	background: url('../images/bg.png');
+}
+
+.wrapper{
+	min-height:100%;
+	padding-bottom:150px;
+	margin-bottom:-80px;
+	@include tablets {
+		padding-bottom:120px;
+		margin-bottom: -64px;
+	}
+	@include phones{
+		padding-bottom:114px;
+	}
+}
+
+.container{
+	max-width:960px;
+	margin: 0 auto;
+	@include tablets {
+		max-width:93.75%;
+	}
+
+	@include phones {
+		max-width: 92.5%;
+	}
+
+}
+
+.section{
+	clear:both;
+	border-radius:5px;
+	background:$white;
+	overflow:hidden;
+	padding:30px;
+	position:relative;
+	&:not(:last-of-type){
+		margin-bottom:12px;
+	}
+	
+	@include phones{
+		background-color:#f7f8f8;
+		padding:15px;
+	}
+
+
+	&_type_favorite{
+		&::before{
+			content:'';
+			display:block;
+			position:absolute;
+			top:0;
+			right:0;
+			border-top:24px solid #ef4b2b;
+			border-right:24px solid #ef4b2b;
+			border-left:24px solid transparent;
+			border-bottom:24px solid transparent;
+			@include phones{
+				border-width:20px;
+			}
+		}
+		&::after{
+			content:'';
+			display:block;
+			position:absolute;
+			top:6px;
+			right:6px;
+			@include sprite($star);
+			
+		}
+	}
+
+
+	&_type_protected{
+		&::before{
+			content:'';
+			display:block;
+			position:absolute;
+			top:0;
+			right:0;
+			border-top:24px solid #3c434a;
+			border-right:24px solid #3c434a;
+			border-left:24px solid transparent;
+			border-bottom:24px solid transparent;
+			@include phones{
+				border-width:20px;
+			}
+		}
+		&::after{
+			content:'';
+			display:block;
+			position:absolute;
+			top:6px;
+			right:6px;
+			@include sprite($lock);
+			
+		}
+	}
+
+
+	&_type_archived{
+		opacity:.7;
+		&::before{
+			content:'';
+			display:block;
+			position:absolute;
+			top:0;
+			right:0;
+			border-top:24px solid #979da3;
+			border-right:24px solid #979da3;
+			border-left:24px solid transparent;
+			border-bottom:24px solid transparent;
+			@include phones{
+				border-width:20px;
+			}
+		}
+		&::after{
+			content:'';
+			display:block;
+			position:absolute;
+			top:6px;
+			right:6px;
+			@include sprite($box);
+			
+		}
+	}
+}
+
+.section__bottom{
+	clear:both;
+	&::after{
+		content: '';
+		display:block;
+		clear:both;
+		height:0px;
+	}	
+}
+
+.section__time{
+	color:#aeb4ba;
+	float:left;
+}
+
+.section__share-list{
+	float:right;
+}
+
+.section__share-item{
+	display:inline-block;
+	float:right;
+	margin-left:12px;
+}
+
+.section__share-link{
+	display:block;
+	height:20px;
+	width:20px;
+	position:relative;
+}
+
+.section__type{
+	float:right;
+	&_protected{
+		color: #009ce6;
+	}
+	&_archived{
+		color: #858585;
+	}
+
+}
+
+.footer {
+	height:$footer-height;	
+}
+
+ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration:none;
+}
+
+.sprite{
+	&_tw-foot {
+		@include sprite($twi-foot);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_fb-foot {
+		@include sprite($fb-foot);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_soc-in{
+		@include sprite($soc-in);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_soc-vk{
+		@include sprite($soc-vk);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_soc-tw{
+		@include sprite($soc-tw);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_soc-fb{
+		@include sprite($soc-fb);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_share{
+		@include sprite($share);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_url{
+		@include sprite($url);
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_share{
+		@include sprite($share);
+	}
+	&_list{
+		@include sprite($list);
+	}
+	&_db{
+		@include sprite($db);
+		position:absolute;
+		top:55%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_skydrive{
+		@include sprite($skydrive);
+		position:absolute;
+		top:55%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+	&_attach-doc{
+		@include sprite($attach-doc);
+		position:absolute;
+		top:55%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+}

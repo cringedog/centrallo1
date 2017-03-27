@@ -1,0 +1,87 @@
+@import "../misc/helpers";
+
+
+.event{
+	padding-bottom:10px;
+	margin-bottom:15px;
+	display:block;
+}
+
+
+.event__media{
+	padding-bottom:24px;
+	border-bottom: 1px solid #bdbdbd;;
+	margin-bottom:15px;
+	display:block;
+}
+
+.event__item{
+	display:inline-block;
+	margin: 0 9px 12px 0;
+	@include phones{
+		display:block;
+		margin:0;
+
+	}
+
+}
+
+.event__item-link{
+	position:relative;
+	height:140px;
+	display:block;
+	@include tablets {
+		height:120px;
+	}
+	@include phones{
+		height:auto;
+		width:100%;
+	}
+}
+
+.event__item-image{
+	height:inherit;
+	@include phones{
+		height:auto;
+		width:inherit;
+	}
+}
+
+.event__item-icon_type_video{
+	position:absolute;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	background-color: transparentize(#00aeff, 0.1);
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+
+	&::after{
+		content:'';		
+		display:block;
+		position:absolute;
+		border-left:16px solid $white;
+		border-top:10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-right:none;
+		top:50%;
+		left:56%;
+		transform: translate(-50%,-50%);
+
+	}
+}
+
+
+.calendar{
+	color: #858585;
+	padding-left:32px;
+	position:relative;
+}
+
+.calendar__icon{
+	@include sprite($calendar);
+	position:absolute;
+	top:-3px;
+	left:0;
+}
